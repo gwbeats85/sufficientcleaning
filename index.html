@@ -1,0 +1,549 @@
+<!-- Save as: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sufficient Cleaning | Residential Deep Cleaning, Garage Cleanouts, Pressure Washing</title>
+  <meta name="description" content="Sufficient Cleaning offers residential deep cleaning, garage cleanouts with removal, and pressure washing. Call/text for a free estimate." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b1220;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+      --card:#f8fafc;
+      --blue:#2f67d8;
+      --blue-2:#eaf2ff; /* light blue */
+      --btn:#2f67d8;
+      --btnText:#ffffff;
+      --shadow: 0 10px 30px rgba(17,24,39,.08);
+      --radius:16px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:saturate(180%) blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; letter-spacing:.2px;
+    }
+    .mark{
+      width:40px; height:40px; border-radius:12px;
+      background:linear-gradient(135deg, var(--blue), #7aa7ff);
+      display:grid; place-items:center;
+      color:#fff; font-weight:900;
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+    }
+    .brand small{
+      display:block;
+      font-weight:700;
+      color:var(--muted);
+      letter-spacing:.2px;
+      margin-top:1px;
+    }
+    .links{
+      display:flex; align-items:center; gap:16px;
+      font-weight:700;
+      color:#111827;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .links a{opacity:.9}
+    .links a:hover{opacity:1}
+    .ctaRow{
+      display:flex; align-items:center; gap:10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:800;
+      border:1px solid transparent;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btnPrimary{background:var(--btn); color:var(--btnText)}
+    .btnPrimary:hover{filter:brightness(.95)}
+    .btnGhost{background:transparent; border-color:var(--line); color:#111827}
+    .btnGhost:hover{background:#f3f4f6}
+    .hero{
+      padding:56px 0 28px;
+      background:
+        radial-gradient(900px 400px at 10% 10%, var(--blue-2), transparent 60%),
+        radial-gradient(800px 350px at 90% 15%, #f0f7ff, transparent 55%);
+      border-bottom:1px solid var(--line);
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:24px;
+      align-items:center;
+    }
+    h1{
+      font-size: clamp(34px, 4vw, 54px);
+      line-height:1.05;
+      margin:0 0 12px;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      font-size: clamp(16px, 1.6vw, 18px);
+      color:var(--muted);
+      margin:0 0 18px;
+      max-width:52ch;
+      font-weight:600;
+    }
+    .pillRow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin:0 0 18px;
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      background:#ffffff;
+      border:1px solid var(--line);
+      font-weight:800;
+      color:#111827;
+      box-shadow: 0 4px 14px rgba(17,24,39,.05);
+      font-size:13px;
+    }
+    .heroCard{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .heroCard h3{margin:0 0 8px; font-size:16px}
+    .heroCard p{margin:0 0 14px; color:var(--muted); font-weight:600; font-size:14px}
+    .miniList{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+    .miniList li{
+      display:flex; gap:10px; align-items:flex-start;
+      font-weight:700; color:#111827;
+      font-size:14px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background:var(--blue);
+      margin-top:5px;
+      flex:0 0 auto;
+    }
+    section{padding:54px 0}
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px; margin-bottom:18px;
+    }
+    h2{
+      margin:0;
+      font-size: clamp(24px, 2.4vw, 32px);
+      letter-spacing:-.4px;
+    }
+    .lead{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-weight:600;
+      max-width:70ch;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:18px}
+    .card p{margin:0 0 12px; color:var(--muted); font-weight:600}
+    .bullets{margin:0; padding-left:18px; color:#111827; font-weight:650}
+    .bullets li{margin:6px 0}
+    .badge{
+      display:inline-flex; align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-weight:800;
+      font-size:12px;
+      color:#111827;
+      margin-bottom:10px;
+    }
+    .pricing{
+      background:linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .priceGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+    .priceCard{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: 0 6px 18px rgba(17,24,39,.06);
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .priceTop{display:flex; align-items:flex-start; justify-content:space-between; gap:12px}
+    .priceName{font-weight:900; font-size:18px; margin:0}
+    .price{
+      font-weight:950;
+      font-size:28px;
+      letter-spacing:-.6px;
+      margin:6px 0 0;
+    }
+    .price small{font-size:12px; color:var(--muted); font-weight:800}
+    .priceMeta{color:var(--muted); font-weight:650; margin:0}
+    .divider{height:1px; background:var(--line); margin:6px 0}
+    .priceCard .btn{width:100%}
+    .note{
+      margin-top:12px;
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
+    }
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+    .contactCard{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .kv{
+      display:grid;
+      grid-template-columns: 120px 1fr;
+      gap:10px;
+      padding:10px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .kv:last-child{border-bottom:none}
+    .k{color:var(--muted); font-weight:800}
+    .v{font-weight:850}
+    form{display:grid; gap:10px}
+    label{font-weight:850; font-size:13px}
+    input, textarea, select{
+      width:100%;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      font:inherit;
+      background:#fff;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .footer{
+      padding:24px 0;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-weight:650;
+      font-size:13px;
+    }
+    .mobileOnly{display:none}
+    @media (max-width: 900px){
+      .heroGrid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .priceGrid{grid-template-columns:1fr}
+      .contactGrid{grid-template-columns:1fr}
+      .links{display:none}
+      .mobileOnly{display:inline-flex}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Sufficient Cleaning Home">
+          <img src="logo.gif" alt="Sufficient Cleaning logo" style="height:40px;">
+          <div>
+            SUFFICIENT CLEANING & MORE
+            <small>Residential services</small>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Site navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="ctaRow">
+          <!-- Replace the phone number -->
+          <a class="btn btnGhost" href="tel:+1-425-591-5402">Call</a>
+          <a class="btn btnPrimary" href="#contact">Free Estimate</a>
+          <a class="btn btnGhost mobileOnly" href="#services">Menu</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <div class="wrap">
+      <div class="heroGrid">
+        <div>
+          <div class="pillRow" aria-label="Service highlights">
+            <span class="pill">✔ Deep Cleaning</span>
+            <span class="pill">✔ Garage Cleanouts</span>
+            <span class="pill">✔ Pressure Washing</span>
+          </div>
+          <h1>Clean done right—<br/>for your home.</h1>
+          <p class="sub">
+            Sufficient Cleaning provides reliable residential deep cleaning, garage cleanouts with removal,
+            and pressure washing. Simple scheduling. Clear results.
+          </p>
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="#contact">Get a Free Estimate</a>
+            <a class="btn btnGhost" href="#services">See Services</a>
+          </div>
+          <p class="note">Serving: <strong>Seattle / Bellevue</strong> • Hours: <strong>By appointment</strong></p>
+        </div>
+
+        <aside class="heroCard" aria-label="Quick info">
+          <h3>What you can expect</h3>
+          <p>Professional, detail-focused work with an easy process.</p>
+          <ul class="miniList">
+            <li><span class="dot"></span>Show up on time, ready to work</li>
+            <li><span class="dot"></span>Top-to-bottom clean and clear communication</li>
+            <li><span class="dot"></span>Text updates + before/after photos (on request)</li>
+            <li><span class="dot"></span>Free estimate and straightforward pricing</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sectionHead">
+        <div>
+          <h2>About Sufficient Cleaning</h2>
+          <p class="lead">
+            We’re a residential-focused cleaning company built on one thing: do the job properly the first time.
+            Whether it’s a deep house clean, clearing out a garage, or restoring a driveway, we keep it simple and effective.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sectionHead">
+        <div>
+          <h2>Services</h2>
+          <p class="lead">Pick what you need. We’ll handle the mess.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="badge">Deep House Cleaning</div>
+          <h3>Deep Cleaning</h3>
+          <p>Top-to-bottom cleaning for kitchens, bathrooms, and living spaces.</p>
+          <ul class="bullets">
+            <li>Floors, baseboards, and high-touch areas</li>
+            <li>Kitchen surfaces, sink, stovetop</li>
+            <li>Bathrooms: tub/shower, toilet, mirrors</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="badge">Garage Cleanouts</div>
+          <h3>Garage Cleaning + Removal</h3>
+          <p>Clean, organize, and remove unwanted items so you get the space back.</p>
+          <ul class="bullets">
+            <li>Sort & clear clutter</li>
+            <li>Haul away unwanted items*</li>
+            <li>Sweep-out and reset space</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="badge">Exterior</div>
+          <h3>Pressure Washing</h3>
+          <p>Refresh exterior surfaces safely and effectively.</p>
+          <ul class="bullets">
+            <li>Driveways, sidewalks, patios</li>
+            <li>Porch/entry cleanup</li>
+            <li>Before/after photos available</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="note">*Removal/disposal fees may apply depending on load size and local dump fees.</p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="pricing">
+    <div class="wrap">
+      <div class="sectionHead">
+        <div>
+          <h2>Pricing</h2>
+          <p class="lead">Keep it simple. These are starter ranges. We confirm a final quote after a quick call/text or photos.</p>
+        </div>
+      </div>
+
+      <div class="priceGrid">
+        <div class="priceCard">
+          <div class="priceTop">
+            <div>
+              <p class="priceName">Deep Cleaning</p>
+              <p class="priceMeta">Homes & apartments</p>
+            </div>
+            <div class="price">
+              $___<br><small>starting</small>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <ul class="bullets">
+            <li>Based on size + condition</li>
+            <li>Optional add-ons available</li>
+            <li>Ideal for resets & first-time clean</li>
+          </ul>
+          <a class="btn btnPrimary" href="#contact">Get Quote</a>
+        </div>
+
+        <div class="priceCard">
+          <div class="priceTop">
+            <div>
+              <p class="priceName">Garage Cleanout</p>
+              <p class="priceMeta">Cleaning + haul away</p>
+            </div>
+            <div class="price">
+              $___<br><small>starting</small>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <ul class="bullets">
+            <li>Depends on amount of items</li>
+            <li>Dump fees may apply</li>
+            <li>Fast reclaim of usable space</li>
+          </ul>
+          <a class="btn btnPrimary" href="#contact">Get Quote</a>
+        </div>
+
+        <div class="priceCard">
+          <div class="priceTop">
+            <div>
+              <p class="priceName">Pressure Washing</p>
+              <p class="priceMeta">Driveway / patio / walkways</p>
+            </div>
+            <div class="price">
+              $___<br><small>starting</small>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <ul class="bullets">
+            <li>Priced by square footage</li>
+            <li>Optional package discounts</li>
+            <li>Visible results immediately</li>
+          </ul>
+          <a class="btn btnPrimary" href="#contact">Get Quote</a>
+        </div>
+      </div>
+
+      <p class="note"><strong>Tip:</strong> Put real numbers later. Even “Starting at $199” increases conversions versus blanks.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sectionHead">
+        <div>
+          <h2>Contact</h2>
+          <p class="lead">Call/text for a free estimate, or send a quick request below.</p>
+        </div>
+      </div>
+
+      <div class="contactGrid">
+        <div class="contactCard">
+          <div class="kv">
+            <div class="k">Phone</div>
+            <div class="v"><a href="tel:+1-425-591-5401">(425) 591-5401</a></div>
+          </div>
+          <div class="kv">
+            <div class="k">Email</div>
+            <div class="v"><a href="mailto:sufficiantcleaning58@gmail.com">Gerardo@sufficientcleaning.com</a></div>
+          </div>
+          <div class="kv">
+            <div class="k">Service Area</div>
+            <div class="v">Seattle / Bellevue</div>
+          </div>
+          <div class="kv">
+            <div class="k">Hours</div>
+            <div class="v">By appointment</div>
+          </div>
+
+          <p class="note">
+            Want the fastest quote? Text 2–3 photos + your address and what service you want.
+          </p>
+        </div>
+
+<div class="contactCard" style="text-align:center">
+
+  <!-- Cloud Logo -->
+  <div style="margin-bottom:16px">
+    <svg viewBox="0 0 74.7 45.01" width="120" aria-label="Sufficient Cleaning cloud mark" role="img">
+      <path fill="#75c0e1" d="M16.56.11c4.29-.61,9.23,1.42,11.57,5.1,1.94,3.05-.56,2.96-2.16,4.79-5.6,6.36-3.41,15.85,3.38,20.35,9.72,6.43,19.68-.99,26.72-7.76,1.2-1.15,3.32-4.09,4.54-4.81,1.14-.67,2.5.69,3.36,1.46,9.24,8.2,2.89,23.15-9.34,22.51-4.58-.24-8.82-2.35-12.99-4.03l-6.92-4.37c-.66-.09-.88.55-1.32.84-6.08,4.01-17.98,9.5-25.14,6.7-9.25-3.62-11.17-15.6-3.5-21.89.53-.43,2.86-1.79,2.96-2.09.24-.72-.79-3.26-.9-4.3C6.2,6.57,10.57.96,16.56.11Z"/>
+      <path fill="#75c0e1" d="M50.68,16.82c2.88-.8,5.65-.9,8.62-.47.4.33-2.33,2.95-2.63,3.24-6.94,6.57-20.29,15.84-28.29,5.74-5.6-7.07-.58-18.88,8.27-19.76,7.68-.77,13.03,3.71,14.03,11.25Z"/>
+    </svg>
+  </div>
+
+<iframe data-tally-src="https://tally.so/embed/VLQR4M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="374" frameborder="0" marginheight="0" marginwidth="0" title="Request a Free Estimate"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      © <span id="y"></span> Sufficient Cleaning. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
